@@ -1,0 +1,130 @@
+
+/* UNIVERSAL */
+
+html,
+body {
+  background-color: black;
+  font-family: "arial", sans-serif;
+}
+
+/* FONT STYLES */
+
+* {
+  color: white;
+  line-height: 1.5;
+  margin: 10px;
+}
+
+body {
+  margin: auto;
+  max-width: 1000px;
+}
+
+/* TYPOGRAPHY & POSITIONNING */
+
+h1 {font-size: 2.5rem;}
+h2 {font-size: 1.5rem;}
+
+div a {
+  font-size: 3rem;
+  font-weight: 600;
+
+  border-bottom: 4px solid white;
+  text-decoration: none;
+
+  margin: 0;
+}
+
+div a:hover { 
+  border-bottom: none;
+  background-color: black;
+}
+
+/* HEADER */
+
+
+#name {
+  display: block;
+  float: left;
+  width: 350px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+#detail {
+  display: block;
+  float: right;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  word-spacing: 0.1em;
+  line-height: 1.5;
+  margin-bottom: 5sem;
+}
+
+/* GRID LAYOUT */
+
+.twoElementsLine {
+  clear: both;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  white-space: pre;
+}
+
+.ThreeElementsLine {
+  clear: both;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  white-space: pre;
+  justify-content: space-evenly;  
+}
+
+#item2, #item5, #item8 {
+  justify-self: end;
+}
+
+#item4, #item7 {
+  align-self: center;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 950px) {
+
+#name {
+  display: block;
+  float: none;
+  font-size: 1.5em;
+}
+
+#detail {
+  display: block;
+  float: none;
+}
+
+@media only screen and (max-width: 850px) {
+
+
+#name {
+  display: block;
+  float: none;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+#detail {
+  display: block;
+  float: none;
+  width: 100%;
+}
+
+.twoElementsLine, .ThreeElementsLine {
+  clear: both;
+  display: grid;
+  grid-template-columns: 1fr;
+  white-space: normal;
+  justify-self: start;
+}
+
+#item2, #item5, #item8 {
+  justify-self: start;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Camille Muffat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="css/styles-images.css">
+</head>
+
+<body>
+<div class="w3-content w3-display-container w3-display-middle">
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine1.jpg" alt="Piscine Camille Muffat 1"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine2.jpg" alt="Piscine Camille Muffat 2"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine3.jpg" alt="Piscine Camille Muffat 3"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine4.jpg" alt="Piscine Camille Muffat 4"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine5.jpg" alt="Piscine Camille Muffat 5"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine6.jpg" alt="Piscine Camille Muffat 6"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine7.jpg" alt="Piscine Camille Muffat 7"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine8.jpg" alt="Piscine Camille Muffat 8"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine9.jpg" alt="Piscine Camille Muffat 9"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine10.jpg" alt="Piscine Camille Muffat 10"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine11.jpg" alt="Piscine Camille Muffat 11"></div>
+	<div class="mySlides" ><img class="imagetest1" src="img/piscine12.jpg" alt="Piscine Camille Muffat 12"></div>
+
+	<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
